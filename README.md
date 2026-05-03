@@ -1,7 +1,6 @@
-arduino
-=======
+# rust-arduino-uno-r3
 
-Rust project for the _Arduino Uno_.
+This Rust project aims to mimic how Arduino IDE is. providing pin_mode, digital_write, and functions or utilities similar to Arduino IDE.
 
 ## Build Instructions
 1. Install prerequisites as described in the [`avr-hal` README] (`avr-gcc`, `avr-libc`, `avrdude`, [`ravedude`]).
@@ -18,7 +17,5 @@ Rust project for the _Arduino Uno_.
 [`avr-hal` README]: https://github.com/Rahix/avr-hal#readme
 [`ravedude`]: https://crates.io/crates/ravedude
 
-## Contribution
-Unless you explicitly state otherwise, any contribution intentionally submitted
-for inclusion in the work by you, as defined in the Apache-2.0 license, shall
-be dual licensed as above, without any additional terms or conditions.
+## Notes
+This project is a source base, not a library or what you may think of.
