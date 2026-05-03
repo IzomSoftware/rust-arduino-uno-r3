@@ -1,0 +1,24 @@
+[package]
+name = "arduino"
+version = "0.1.0"
+edition = "2024"
+
+[[bin]]
+name = "arduino"
+test = false
+bench = false
+
+[dependencies]
+avr-device = { version = "0.7.0", features = ["atmega328p", "avr-device-macros", "docsrs", "rt", "critical-section-impl"] }
+atmega-hal = { git = "https://github.com/Rahix/avr-hal", features = ["atmega328p", "rt"]}
+avr-hal-generic = { git = "https://github.com/Rahix/avr-hal"}
+ufmt = "0.2.0"
+critical-section = "1.2.0"
+
+[profile.release]
+strip = true
+lto = "fat"
+opt-level = "z"
+codegen-units = 1
+panic = "abort"
+debug = 0
